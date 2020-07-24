@@ -1,0 +1,40 @@
+.job-card {
+    border: none;
+    box-shadow: 0 3px 10px rgba(62,85,120,.045);
+    transition: .4s;
+}
+
+.job-card:hover{
+    box-shadow: 10px 14px 36px 0px rgba(0, 0, 0, 0.1) !important;
+}
+
+.app-button {
+    box-shadow: 10px 14px 36px 0px rgba(0, 0, 0, 0.1) !important;
+    transition: .4s;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    font-size: 13px;
+}
+
+.form-row {
+    justify-content: space-evenly;
+}
+
+.my-form-field:nth-child(3){
+    margin-top: 38px;
+}
+
+@media screen and (max-width: 768px){
+    .my-form-field{
+        width: 100%;
+    }
+    .my-form-field:nth-child(3){
+        margin-top: 0;
+    }
+}
+
+.app-button:hover{
+    background: #F752CD;
+}

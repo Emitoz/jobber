@@ -4,6 +4,8 @@ import { Container } from 'react-bootstrap';
 import JobCard from './JobCard';
 import JobsPagination from './JobsPagination';
 import SearchJobs from './SearchJobs';
+import './App.css';
+import Logo from './jobrLogo.svg';
 
 function App() {
 
@@ -23,7 +25,8 @@ function App() {
 
   return (
     <Container className="my-5">
-      <h1 className="mb-4">Jobr</h1>
+      <img src={Logo} style={{ height: 50 }}/>
+      <hr />
       <SearchJobs params={params} onParamChange={handleParamsChange}/>
 
       <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage} />

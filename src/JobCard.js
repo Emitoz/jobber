@@ -5,7 +5,7 @@ import ReactMarkDown from 'react-markdown';
 export default function JobCard({ job }) {
     const [open, setOpen] = useState(false)
     return (
-        <Card className="mb-3">
+        <Card className="mb-3 job-card">
             <Card.Body>
                 <div className="d-flex justify-content-between">
                     <div>
@@ -17,7 +17,9 @@ export default function JobCard({ job }) {
                         </Card.Subtitle>
                         <Badge variant="secondary" className="mr-2">{job.type}</Badge>
                         <Badge variant="warning">{job.location}</Badge>
+                        <hr />
                         <div style={{ wordBreak: 'break-all' }}>
+                            <small><strong>HOW TO APPLY:</strong></small>
                             <ReactMarkDown source={job.how_to_apply} />
                         </div>
                     </div>
@@ -27,7 +29,7 @@ export default function JobCard({ job }) {
                 <Card.Text>
                     <Button 
                         onClick={() => setOpen(prevOpen => !prevOpen)}
-                        variant="primary"
+                        className="app-button"
                     >
                         { open ? 'Hide details' : 'View details'}
                     </Button>
